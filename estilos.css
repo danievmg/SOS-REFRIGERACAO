@@ -1,0 +1,268 @@
+/* Reset de estilos para o body */
+body {
+  margin: 0;
+  padding: 0;
+
+  height: 100%;
+  width: 100%;
+
+  text-align: center;
+  box-sizing: border-box;
+
+  background-color: rgb(204, 29, 29);
+  font-family: Roboto, sans-serif;
+}
+
+
+/* MENU */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #ebebeb;
+  display: flex;
+}
+
+nav ul li {
+  flex-grow: 1;
+  /* display: block; */
+}
+
+nav ul li a {
+  display: block;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+/* Estilos para a classe .home */
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  font-size: 1rem; /* 12px em relação ao tamanho padrão de fonte */
+
+  height: 30rem; /* 300px em relação ao tamanho padrão de fonte */
+  
+  padding: 1.25rem; /* 20px em relação ao tamanho padrão de fonte */
+
+  /* background-image: url(teste06.png); */
+  background-color: blue;
+}
+
+/* Estilos para os botões dentro da classe .home */
+.home .botao a {
+  /* display: flex; */
+  text-align: center;
+
+  color: aliceblue;
+  text-decoration: none;
+  background-color: rgb(25, 0, 255);
+  margin: 0.0625rem;/* 1px em relação ao tamanho padrão de fonte */
+  padding: 0.9375rem;/* 15px em relação ao tamanho padrão de fonte */
+  height: 0.75rem;/* 12px em relação ao tamanho padrão de fonte */
+  border-radius: 3rem;/* 12px em relação ao tamanho padrão de fonte */
+  /* flex-wrap: wrap ; */
+}
+
+/* Estilos para os containers dentro da classe .home */
+.container01 {
+  -ms-flex-align: center;
+  padding: 2rem;
+
+  font-size: 2rem;
+  /* 40px em relação ao tamanho padrão de fonte */
+  text-align: center;
+
+  color: blue;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0.75rem;
+  /* 12px em relação ao tamanho padrão de fonte */
+}
+
+.container01 {
+  width: 30rem;
+  /* 400px em relação ao tamanho padrão de fonte */
+}
+
+.container02 {
+  width: 40rem;
+  /* 500px em relação ao tamanho padrão de fonte */
+}
+
+/* Media query para telas menores */
+
+
+/* Estilização da aba de serviços */
+
+.servicos{
+  display: flex;
+  padding: 10px;
+  background-color: aqua;
+  
+
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+
+.Geladeiras{
+  background-color: azure;
+  height: 25rem;
+  width: 25rem;
+  padding: 1px;
+}
+
+.Maquinas{
+  background-color: rgb(91, 131, 131);
+  height: 25rem;
+  width: 25rem;
+}
+
+.Vendas{
+  background-color: rgb(69, 131, 131);
+  height: 25rem;
+  width: 25rem;
+}
+
+/* Estilização da ABA "Quem somos nós" */
+.sobre {
+  display: flex;
+  height: 25rem;
+  background-color: bisque;
+}
+
+
+
+/* Menu de Tracihos */
+
+.menuzinho {
+  display: none;
+  background-color: white;
+}
+.menuzinho img{
+  height: 5rem;
+  width: 5rem;
+  text-align: center;
+  /* padding: 1rem; */
+  
+}
+.menuzinho a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  padding: 1rem;
+
+}
+
+
+.MenuFlutuante{
+
+  position: fixed;
+  text-align: start;
+
+}
+
+/* dentro do menu */
+.menu-div  {
+  display: none; /* Inicialmente escondida */
+  flex-direction: row;
+  /* height: 100%; */
+}
+.menu-div a{
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+/* Layout para dispositivos grandes (desktops) */
+@media (min-width: 1200px) {
+  .container {
+      max-width: 1200px;
+  }
+}
+
+/* Layout para dispositivos médios (tablets em modo paisagem) */
+@media (max-width: 1199px) {
+    
+}
+
+/* Layout para dispositivos pequenos (smartphones em modo retrato) */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  .menuzinho{
+    display: block;
+  }
+  .menuzinho img, .menuzinho a {
+    display: inline-block;
+      vertical-align: middle;
+  }
+
+
+
+
+  .home {
+    /* flex-direction: column; */
+    font-size: 0.7rem;
+    /* 9px em relação ao tamanho padrão de fonte */
+
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+  }
+
+  .home .botao a {
+    height: 1rem;
+    font-size: 0.8rem;
+
+
+  }
+
+  .container01{
+    font-size: 0.9rem;
+    width:25rem ;
+  }
+  .container02{
+    font-size: 0.9rem;
+  }
+
+  .servicos {
+    flex-direction: column;
+    padding: 0;
+
+    width: 100%;
+    height: 100%;
+  }
+  .servicos .Maquinas{
+    width: 100% ;
+  }
+  .servicos .Geladeiras{
+    width: 100% ;
+  }
+  .servicos .Vendas{
+    width: 100% ;
+  }
+}
+
+/* Layout para dispositivos extra pequenos (smartphones em modo paisagem e outros dispositivos pequenos) */
+@media (max-width: 480px) {
+  .servicos {
+    flex-direction: column;
+    }
+    .container01{
+      font-size: 0.8rem;
+      width:17rem ;
+     
+    }
+}
+
+
+
